@@ -1,0 +1,161 @@
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ol[class], ul[class] {
+  padding: 0;
+}
+
+blockquote, body, dd, dl, figcaption, figure, h1, h2, h3, h4, li, ol, p, ul {
+  margin: 0;
+}
+
+ol[class], ul[class] {
+  list-style: none;
+}
+
+a, a:not([class]) {
+  text-decoration-skip-ink: auto;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+body {
+  height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  font-family: "Roboto";
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+  margin: 0 auto 30px auto;
+}
+.search__title {
+  text-align: center;
+  font-size: 18px;
+}
+.search__control {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.search__input, .search__btn {
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease;
+}
+.search__input {
+  min-width: 200px;
+  padding: 11px;
+  width: 60%;
+  font-size: 14px;
+  box-shadow: 4px 4px 8px 2px rgba(34, 60, 80, 0.2);
+}
+.search__input:focus {
+  outline: none;
+}
+.search__btn {
+  padding: 10px 20px;
+  border: 1px solid #1F25AF;
+  color: #fff;
+  background: #1F25AF;
+  cursor: pointer;
+}
+.search__btn:hover {
+  background: none;
+  color: #1F25AF;
+}
+
+.list {
+  max-width: 1000px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+}
+.list__empty {
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+.list__empty.active {
+  display: block;
+}
+.list__loader {
+  width: 80px;
+  height: 80px;
+  display: none;
+}
+.list__loader.active {
+  display: inline-block;
+}
+.list__loader:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #1F25AF;
+  border-color: #1F25AF transparent #1F25AF transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+.list__item {
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 8px 2px rgba(34, 60, 80, 0.2);
+}
+.list__item:hover {
+  transform: translateY(-10px);
+  box-shadow: 4px 4px 8px 2px rgba(31, 37, 175, 0.3);
+}
+.list__item_title {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 10px;
+}
+.list__item_info {
+  font-size: 14px;
+  color: #656565;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
